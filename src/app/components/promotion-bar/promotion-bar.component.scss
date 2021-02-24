@@ -1,3 +1,64 @@
-div {
+* {
+    /* outlines for debugging */
+    // outline-style: dashed;
+    // outline-color: red;
+    // outline-width: 0.15em;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 0.6px;
+}
+
+img {
+    width: 16px;
+    margin: 1% 2% 0 0;
+    float: left;
+}
+
+#language-text {
+    margin: 0.75% 0 0 0;
+    float: left;
+}
+
+#wrapper {
     background-color: black;
+    /* so that the floats can enlarge the wrapper. */
+    overflow: auto;
+    width: 100%;
+}
+
+#language {
+    font-family: helveticaregular, Helvetica, Arial, sans-serif;
+    float: left;
+    width: 22.5%;
+    margin: 1% 0 0 2.5%;
+    padding: 0 0 1% 0;
+}
+
+#promotion {
+    font-family: helveticabold, Helvetica, Arial, sans-serif;
+    float: left;
+    width: 45%;
+    margin: 1% 2.5%;
+    text-align: center;
+}
+
+// FIXME. broken fonts for helvetica-light
+
+#user {
+    font-family: helveticalight, Helvetica, Arial, sans-serif;
+    float: left;
+    width: 22.5%;
+    margin: 1% 2.5% 0 0;
+    text-align: right;
+}
+
+#user-icon {
+    fill: white;
+    width: 1.5em;
+    float: right;
+}
+
+#user-text {
+    float: right;
+    margin: 1% 2% 0 2%;
 }

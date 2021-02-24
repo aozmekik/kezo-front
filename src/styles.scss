@@ -1,2 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~normalize.css'
+@import '~normalize.css';
+
+// TODO. maybe carry this fonts to another .scss file.
+
+@font-face {
+    font-family: helveticaregular;
+    src: url("assets/font/helvetica/regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: helveticabold;
+    src: url("assets/font/helvetica/helvetica-rounded-bold-5871d05ead8de.otf") format("truetype");
+}
+
+@font-face {
+    font-family: helveticalight;
+    src: url("assets/font/helvetica/helvetica-light-587ebe5a59211.ttf") format("truetype");
+}
+
+
