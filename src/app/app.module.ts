@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PromotionBarComponent } from './components/promotion-bar/promotion-bar.component';
 import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
+import { DropdownMenuComponent } from './components/menu-bar/dropdown-menu/dropdown-menu.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PromotionBarComponent,
-    MenuBarComponent
+    MenuBarComponent,
+    DropdownMenuComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
