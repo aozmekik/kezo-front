@@ -1,8 +1,8 @@
 * {
     /* outlines for debugging */
-    outline-style: dashed;
-    outline-color: red;
-    outline-width: 0.1em;
+    // outline-style: dashed;
+    // outline-color: red;
+    // outline-width: 0.1em;
 }
 
 #wrapper {
@@ -11,16 +11,33 @@
     overflow: hidden;
     width: 100%;
     font-family: helveticaregular;
+    font-size: 12px;
+
+    /* footer specific */
+    position: fixed;
+    left: 0;
+    bottom: 0;
 }
 
 #email {
-    margin: 4em;
-    font-size: 12px;
+    margin: 8em 2em 8em 20em;
+    width: 30%;
+    overflow: hidden;
+    border-right: 0.1em;
+    border-right-color: gray;
+    border-right-style: solid;
+    float: left;
+}
+
+#right {
+    margin: 8em 5em 8em 2em;
+    width: 50%;
+    float: left;
 }
 
 .column {
     float: left;
-    width: 12%;
+    width: 20%;
     margin: 0 0 0 2.5%;
 }
 
@@ -29,8 +46,9 @@
     border-style: solid;
     border-width: 0.2em;
     border-color: white;
-    width: 30%;
+    width: 75%;
     overflow: hidden;
+    float: left;
 }
 
 input {
@@ -38,7 +56,7 @@ input {
     background-color: black;
     color: white;
     padding: 1.5em;
-    width: 80%;
+    width: 75%;
     float: left;
 }
 
@@ -47,9 +65,77 @@ input::placeholder {
     opacity: 1;
 }
 
+input::after {
+    border-style: none;
+}
+
+
 #cta-arrow {
     float: left;
     fill: white;
     width: 7%;
-    margin: 1.2em;
+    margin: 1.5em;
+}
+
+#info {
+    background-color: white;
+    border-radius: 5em;
+    width: 4%;
+    float: left;
+    margin: 1.7em 0 0 2em;
+    fill: black;
+    padding: 0.4em;
+}
+
+#info:hover {
+    background-color: #f12da6;
+    fill: white;
+}
+
+div#email>ul {
+    margin: 0 6em;
+    clear: both;
+    display: flex;
+    list-style-type: none;
+}
+
+div#email>ul>li {
+    width: 6%;
+    margin: 2em 1.5em;
+}
+
+div#email>ul>li>a {
+    fill: white;
+    width: 100%;
+}
+
+div#email>ul>li>a:hover {
+    fill: #f12da6;
+}
+
+.column>ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.column>ul>li {
+    margin: 0 0 1em 0;
+}
+
+.column>ul>li>a {
+    color: white;
+    text-decoration: none;
+}
+
+.column>ul>li>a:hover {
+    text-decoration: underline;
+}
+
+#copyright {
+    border-top-color: gray;
+    border-top-style: solid;
+    border-top-width: 0.1em;
+    padding: 0.5em;
+    clear: both;
+    text-align: center;
 }
