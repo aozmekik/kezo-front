@@ -7,58 +7,95 @@
     font-size: 12px;
     letter-spacing: 0.6px;
 }
+// FIXME. broken fonts for helvetica-light
+
+.row {
+    background-color: black;
+}
+
+/* expand header */
+[class*="col"] {
+    padding: 1em 0 1em 0;
+}
 
 img {
     width: 16px;
-    margin: 1% 2% 0 0;
+    margin: 0.3em 0.8em 0 0;
     float: left;
 }
 
 #language-text {
-    margin: 0.75% 0 0 0;
     float: left;
-}
-
-#wrapper {
-    background-color: black;
-    /* so that the floats can enlarge the wrapper. */
-    overflow: auto;
-    width: 100%;
 }
 
 #language {
+    display: block;
     font-family: helveticaregular, Helvetica, Arial, sans-serif;
-    float: left;
-    width: 22.5%;
-    margin: 1% 0 0 2.5%;
-    padding: 0 0 1% 0;
+    padding-left: 4em;
 }
+
 
 #promotion {
     font-family: helveticabold, Helvetica, Arial, sans-serif;
-    float: left;
-    width: 45%;
-    margin: 1% 2.5%;
     text-align: center;
 }
 
-// FIXME. broken fonts for helvetica-light
-
 #user {
     font-family: helveticalight, Helvetica, Arial, sans-serif;
-    float: left;
-    width: 22.5%;
-    margin: 1% 2.5% 0 0;
     text-align: right;
+    padding-right: 4em;
 }
 
 #user-icon {
     fill: white;
     width: 1.5em;
     float: right;
+    margin-right: 0.5em;
 }
 
 #user-text {
     float: right;
-    margin: 1% 2% 0 2%;
+}
+
+#offers {
+    font-family: helveticabold, Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+
+#drop-down-icon {
+    fill: #e0e0e0;
+    width: 1.5em;
+    margin: 0 1.5em;
+    float: right;
+}
+
+/* mobile devices */
+
+#language,
+#promotion,
+#user {
+    display: none;
+}
+
+
+/* small devices */
+@media screen and (min-width: 768px) {
+    #language {
+        display: initial;
+    }
+}
+
+/* large & medium devices */
+@media screen and (min-width: 992px) {
+    #language,
+    #promotion,
+    #user {
+        display: initial;
+    }
+
+    #offers,
+    #drop-down {
+        display: none;
+    }
 }
