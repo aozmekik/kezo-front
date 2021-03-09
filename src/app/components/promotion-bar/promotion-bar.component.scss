@@ -9,21 +9,16 @@
 }
 // FIXME. broken fonts for helvetica-light
 
-div[role=button] {
-    cursor: default;
-}
-
 button {
     width: 100%;
     background-color: Transparent;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     border: none;
-    cursor:default;
+    cursor: default;
     overflow: hidden;
-    outline:none;
+    outline: none;
     margin: 0;
 }
-
 
 .row {
     background-color: black;
@@ -56,8 +51,8 @@ img {
 }
 
 .drop-down-promotion {
-    border-top-width: .1em;
-    border-top-color: #E0E0E0;
+    border-top-width: 0.1em;
+    border-top-color: #e0e0e0;
     border-top-style: solid;
 }
 
@@ -83,11 +78,17 @@ img {
     text-align: center;
 }
 
-#down-icon,
-#bottom-icon {
+#down-icon {
     fill: #e0e0e0;
     width: 1.5em;
     margin: 0 1.5em;
+    float: right;
+}
+
+#bottom-icon {
+    fill: #e0e0e0;
+    width: 1.2em;
+    margin: 0 1.7em;
     float: right;
 }
 
