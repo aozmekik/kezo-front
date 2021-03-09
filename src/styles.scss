@@ -5,6 +5,12 @@
 
 // TODO. maybe carry this fonts to another .scss file.
 
+/* prevent overflowing in x-scroll */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 @font-face {
     font-family: helveticaregular;
     src: url("assets/font/helvetica/regular.otf") format("opentype");

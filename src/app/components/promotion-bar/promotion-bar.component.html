@@ -1,10 +1,10 @@
-<div id="desktop" class="row">
+<button [disabled]="disabled" (click)="toggleShowDiv('divA')" class="row">
     <div id="language" class="col-md-3 col-lg-3 my-auto">
         <img src="assets/country/turkey.png" alt="">
         <div id="language-text">Turkey | TRY TL</div>
     </div>
-    <div id="promotion" class="col-lg-6 my-auto">
-        COVID-19 Response - DEAL OF THE DAY: Buy 1 Get 1 Free Lounge Seperates
+    <div id="promotion" class="col-lg-6 my-auto promotion-text">
+        COVID-19 Response - Bras & Bralettes TL 177,56 - Panties 5/TL337,37
     </div>
     <div id="user" class="col-lg-3 my-auto">
         <div id="user-text"> Log In/ Sign Up</div>
@@ -16,13 +16,22 @@
     </div>
 
     <!-- mobile design -->
+    <!-- without dropdown -->
     <div id="offers" class="col-11 col-sm-11 col-md-6 my-auto">
         Shop Today's Offers
     </div>
     <div id="drop-down" class="col-1 col-sm-1 col-md-3 my-auto">
-        <svg id="drop-down-icon" viewBox="0 0 24 24">
+        <svg id="down-icon" viewBox="0 0 24 24">
             <path
                 d="M21.00025,8.00025 C21.00025,8.25625 20.90225,8.51225 20.70725,8.70725 L12.70725,16.70725 C12.31625,17.09825 11.68425,17.09825 11.29325,16.70725 L3.29325,8.70725 C2.90225,8.31625 2.90225,7.68425 3.29325,7.29325 C3.68425,6.90225 4.31625,6.90225 4.70725,7.29325 L12.00025,14.58625 L19.29325,7.29325 C19.68425,6.90225 20.31625,6.90225 20.70725,7.29325 C20.90225,7.48825 21.00025,7.74425 21.00025,8.00025" />
         </svg>
     </div>
+</button>
+
+<!-- with dropdown -->
+<div [@slideInOut]="animationState" class="row divA">
+    <div class="col-12 promotion-text drop-down-promotion">Bras & Bralettes TL 177,56</div>
+</div>
+<div [@slideInOut]="animationState" class="row divA">
+    <div class="col-12 promotion-text drop-down-promotion">Panties 5/TL337,37</div>
 </div>

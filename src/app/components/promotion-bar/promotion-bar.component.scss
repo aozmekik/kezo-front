@@ -9,6 +9,22 @@
 }
 // FIXME. broken fonts for helvetica-light
 
+div[role=button] {
+    cursor: default;
+}
+
+button {
+    width: 100%;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:default;
+    overflow: hidden;
+    outline:none;
+    margin: 0;
+}
+
+
 .row {
     background-color: black;
 }
@@ -34,10 +50,15 @@ img {
     padding-left: 4em;
 }
 
-
-#promotion {
+.promotion-text {
     font-family: helveticabold, Helvetica, Arial, sans-serif;
     text-align: center;
+}
+
+.drop-down-promotion {
+    border-top-width: .1em;
+    border-top-color: #E0E0E0;
+    border-top-style: solid;
 }
 
 #user {
@@ -62,8 +83,8 @@ img {
     text-align: center;
 }
 
-
-#drop-down-icon {
+#down-icon,
+#bottom-icon {
     fill: #e0e0e0;
     width: 1.5em;
     margin: 0 1.5em;
@@ -77,7 +98,6 @@ img {
 #user {
     display: none;
 }
-
 
 /* small devices */
 @media screen and (min-width: 768px) {
