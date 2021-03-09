@@ -8,58 +8,104 @@
 
 // FIXME. fonts.
 
+button {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    width: 2em;
+    margin: 1.8em 0 auto 1em;
+}
+
+
+.mat-elevation-z5 {
+    position: relative;
+}
+
+.sticky {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+}
+
 #menu-bar {
     background-color: black;
-    /* so that the floats can enlarge the wrapper. */
-    overflow: hidden;
-    width: 100%;
     font-family: Arial, Helvetica, sans-serif;
+    // top: 50px;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0 auto;
-    font-size: 15px;
-}
-
-li {
-    float: left;
-    margin: 1em 0 0 0;
-}
-
-a {
-    display: block;
-    padding: 0.5em;
-    margin: 0em 0.75em;
-    text-decoration: none;
-}
-
-a:hover {
-   text-decoration: underline;
-   text-underline-offset: 0.2em;
+#heart,
+#menu-items {
+    display: none;
 }
 
 svg {
     fill: white;
     width: 1.25em;
-    float: right;
 }
 
 img {
+    width: 8em;
+    display: block;
+    margin: 0.8em auto;
+}
+
+#svg-menu {
     float: left;
-    width: 6%;
-    margin: 0em 1em 1em 2.75em;
+    // margin: 1.8em 0 auto 1em;
 }
 
-#empty-bag {
-    margin: 1.5em 3em 0 0;
+div#most-right > svg {
+    float: right;
+    margin: 1.8em 1em 0 0;
 }
 
-#heart {
-    margin: 1.6em 1.5em 0 0;
+ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 15px;
 }
 
-#search {
-    margin: 1.5em 1.5em 0 0;
+li {
+    float: left;
+}
+
+a {
+    display: block;
+    padding: 0.5em;
+    margin: 2em 1em 0 1em;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+/* large devices */
+@media screen and (min-width: 1200px) {
+    #heart,
+    #menu-items {
+        display: initial;
+    }
+
+    div#most-left,
+    #logo-center {
+        display: none;
+    }
+
+    div#most-right > svg {
+        float: right;
+        margin: 2.5em 1em 0 0;
+    }
+
+    div#most-right > svg#empty-bag {
+        margin-right: 1.5em;
+    }
+
+    div > ul > li > img {
+        display: block;
+        margin: 1em 1em;
+    }
 }
