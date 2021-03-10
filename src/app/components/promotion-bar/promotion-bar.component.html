@@ -21,7 +21,7 @@
         Shop Today's Offers
     </div>
     <div id="drop-down" class="col-1 col-sm-1 col-md-3 my-auto">
-        <div *ngIf="this.animationState === 'in'; then thenBlock else elseBlock"></div>
+        <div *ngIf="this.animationState === 'out'; then thenBlock else elseBlock"></div>
         <ng-template #thenBlock>
             <svg id="down-icon" viewBox="0 0 24 24">
                 <path
