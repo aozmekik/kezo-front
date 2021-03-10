@@ -20,13 +20,9 @@ button {
     margin: 0;
 }
 
-.row {
+.wrapper {
     background-color: black;
-}
-
-/* expand header */
-[class*="col"] {
-    padding: 1em 0 1em 0;
+    padding: 1em 0 1em 0; /* expand header */
 }
 
 img {
@@ -35,28 +31,30 @@ img {
     float: left;
 }
 
-#language-text {
+#desktop-left-text {
     float: left;
 }
 
-#language {
+#desktop-left {
     display: block;
     font-family: helveticaregular, Helvetica, Arial, sans-serif;
     padding-left: 4em;
 }
 
-.promotion-text {
+.mid-text {
     font-family: helveticabold, Helvetica, Arial, sans-serif;
     text-align: center;
 }
 
-.drop-down-promotion {
+.drop-down-box {
     border-top-width: 0.1em;
     border-top-color: #e0e0e0;
     border-top-style: solid;
+    background-color: black;
+    padding: 1em 0 1em 0; /* expand header */
 }
 
-#user {
+#desktop-right {
     font-family: helveticalight, Helvetica, Arial, sans-serif;
     text-align: right;
     padding-right: 4em;
@@ -69,24 +67,26 @@ img {
     margin-right: 0.5em;
 }
 
-#user-text {
+#desktop-right-text {
     float: right;
 }
 
-#offers {
+#mobile-middle {
     font-family: helveticabold, Helvetica, Arial, sans-serif;
     text-align: center;
 }
 
-#down-icon {
-    fill: #e0e0e0;
+#mobile-right {
+    padding: 0;
+}
+
+#arrow-down {
     width: 1.5em;
-    margin: 0 1.5em;
+    margin-right: 1.7em;
     float: right;
 }
 
-#bottom-icon {
-    fill: #e0e0e0;
+#arrow-up {
     width: 1.2em;
     margin: 0 1.7em;
     float: right;
@@ -94,29 +94,29 @@ img {
 
 /* mobile devices */
 
-#language,
-#promotion,
-#user {
+#desktop-left,
+#desktop-mid,
+#desktop-right {
     display: none;
 }
 
 /* small devices */
 @media screen and (min-width: 768px) {
-    #language {
+    #desktop-left {
         display: initial;
     }
 }
 
 /* large & medium devices */
 @media screen and (min-width: 992px) {
-    #language,
-    #promotion,
-    #user {
+    #desktop-left,
+    #desktop-mid,
+    #desktop-right {
         display: initial;
     }
 
-    #offers,
-    #drop-down {
+    #mobile-middle,
+    #mobile-right {
         display: none;
     }
 }

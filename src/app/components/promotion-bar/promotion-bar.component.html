@@ -1,13 +1,13 @@
-<button [disabled]="disabled" (click)="toggleShowDiv('divA')" class="row">
-    <div id="language" class="col-md-3 col-lg-3 my-auto">
+<button [disabled]="disabled" (click)="toggleDropDown()" class="row wrapper">
+    <div id="desktop-left" class="col-md-3 col-lg-3">
         <img src="assets/country/turkey.png" alt="">
-        <div id="language-text">Turkey | TRY TL</div>
+        <div id="desktop-left-text">Turkey | TRY TL</div>
     </div>
-    <div id="promotion" class="col-lg-6 my-auto promotion-text">
+    <div id="desktop-mid" class="col-lg-6 mid-text">
         COVID-19 Response - Bras & Bralettes TL 177,56 - Panties 5/TL337,37
     </div>
-    <div id="user" class="col-lg-3 my-auto">
-        <div id="user-text"> Log In/ Sign Up</div>
+    <div id="desktop-right" class="col-lg-3">
+        <div id="desktop-right-text"> Log In/ Sign Up</div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 19" id="user-icon">
             <path
                 d="M8.999-.002c-3.037 0-5.506 2.383-5.506 5.317 0 1.798.932 3.387 2.35 4.35-3.133 1.229-5.846 4.181-5.847 7.489.003.538.061 1.074.174 1.6l.052.241h17.563l.051-.243a7.883 7.883 0 0 0 .165-1.599c-.004-3.308-2.718-6.257-5.852-7.484 1.422-.963 2.355-2.554 2.355-4.354 0-2.934-2.468-5.317-5.505-5.317zm0 .605c2.698 0 4.878 2.105 4.878 4.712 0 1.759-.997 3.289-2.475 4.098H11.4l-.116.059a4.595 4.595 0 0 1-.542.239h-.001a4.778 4.778 0 0 1-.615.183c-.074.017-.148.034-.222.048a4.768 4.768 0 0 1-.491.063 5.168 5.168 0 0 1-.414.021 5.371 5.371 0 0 1-1.29-.172 4.908 4.908 0 0 1-.412-.128l-.06-.021a5.25 5.25 0 0 1-.532-.236l-.115-.06-.002-.001C5.115 8.599 4.12 7.072 4.12 5.315 4.12 2.708 6.301.603 8.999.603zm-2.454 9.464a5.596 5.596 0 0 0 1.99.541c.153.014.308.023.463.024H9c.155 0 .31-.01.465-.024a5.563 5.563 0 0 0 1.979-.538c3.159 1.017 5.926 3.862 5.93 7.085 0 .415-.057.827-.128 1.236H.758a7.149 7.149 0 0 1-.135-1.237c.002-3.222 2.766-6.068 5.922-7.087z">
@@ -17,37 +17,24 @@
 
     <!-- mobile design -->
     <!-- without dropdown -->
-    <div id="offers" class="col-11 col-sm-11 col-md-6 my-auto">
+    <div id="mobile-middle" class="col-11 col-sm-11 col-md-6 my-auto">
         Shop Today's Offers
     </div>
-    <div id="drop-down" class="col-1 col-sm-1 col-md-3 my-auto">
+    <div id="mobile-right" class="col-1 col-sm-1 col-md-3">
         <div *ngIf="this.animationState === 'out'; then thenBlock else elseBlock"></div>
         <ng-template #thenBlock>
-            <svg id="down-icon" viewBox="0 0 24 24">
-                <path
-                    d="M21.00025,8.00025 C21.00025,8.25625 20.90225,8.51225 20.70725,8.70725 L12.70725,16.70725 C12.31625,17.09825 11.68425,17.09825 11.29325,16.70725 L3.29325,8.70725 C2.90225,8.31625 2.90225,7.68425 3.29325,7.29325 C3.68425,6.90225 4.31625,6.90225 4.70725,7.29325 L12.00025,14.58625 L19.29325,7.29325 C19.68425,6.90225 20.31625,6.90225 20.70725,7.29325 C20.90225,7.48825 21.00025,7.74425 21.00025,8.00025" />
-            </svg>
+            <mat-icon svgIcon="arrow-down" id="arrow-down"></mat-icon>
         </ng-template>
         <ng-template #elseBlock>
-            <svg id="bottom-icon" viewBox="0 0 20 11">
-                <g>
-                    <g transform="translate(-140.000000, -6683.000000)">
-                        <g transform="translate(56.000000, 160.000000)">
-                            <path
-                                d="M84,6532.61035 L85.4053672,6534 L94.0131154,6525.73862 L94.9311945,6526.61986 L94.9261501,6526.61502 L102.573446,6533.95545 L104,6532.58614 C101.8864,6530.55736 95.9854722,6524.89321 94.0131154,6523 C92.5472155,6524.40611 93.9757869,6523.03486 84,6532.61035">
-                            </path>
-                        </g>
-                    </g>
-                </g>
-            </svg>
+            <mat-icon svgIcon="arrow-up" id="arrow-up"> </mat-icon>
         </ng-template>
     </div>
 </button>
 
 <!-- with dropdown -->
 <div [@slideInOut]="animationState" class="row divA">
-    <div class="col-12 promotion-text drop-down-promotion">Bras & Bralettes TL 177,56</div>
+    <div class="col-12 drop-down-box mid-text">Bras & Bralettes TL 177,56</div>
 </div>
 <div [@slideInOut]="animationState" class="row divA">
-    <div class="col-12 promotion-text drop-down-promotion">Panties 5/TL337,37</div>
+    <div class="col-12 drop-down-box mid-text">Panties 5/TL337,37</div>
 </div>
