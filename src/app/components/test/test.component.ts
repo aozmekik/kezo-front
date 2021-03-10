@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 
 @Component({
@@ -7,19 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test.component.scss'],
 })
 export class TestComponent implements OnInit {
-  public animationState = 'out';
+  isSticky: boolean = false;
+
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-
-  toggleShowDiv(divName: string) {
-    if (divName === 'divA') {
-      console.log(this.animationState);
-      this.animationState = this.animationState === 'out' ? 'in' : 'out';
-      console.log(this.animationState);
-    }
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    this.isSticky = window.pageYOffset >= 250;
   }
+
 }
