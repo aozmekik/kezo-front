@@ -10,23 +10,12 @@ import { SlideInOutAnimation } from './slide-in-out-animation';
   animations: [SlideInOutAnimation]
 })
 
-// FIXME. change divA
-
 export class PromotionBarComponent implements OnInit {
   public animationState: String = 'out';
   public disabled: boolean = true;
   private readonly lg = 992;
 
   constructor() { }
-  // constructor(
-  //   private matIconRegistry: MatIconRegistry,
-  //   private domSanitizer: DomSanitizer
-  // ) {
-  //   this.matIconRegistry.addSvgIcon(
-  //     'unicorn',
-  //     this.domSanitizer.bypassSecurityTrustResourceUrl('/assets/icons/unicorn.svg')
-  //   );
-  // }
   ngOnInit(): void {
     this.checkWindowSize();
   }

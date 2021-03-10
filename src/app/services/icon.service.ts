@@ -2,11 +2,7 @@ import { Injectable } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 
-// export enum Icons {
-//   ArrowDown = 'arrow-down',
-// }
-
-export const Icons = ['arrow-down', 'arrow-up']
+export const Icons = ['arrow-down', 'arrow-up', 'user']
 
 @Injectable({
   providedIn: 'root'
