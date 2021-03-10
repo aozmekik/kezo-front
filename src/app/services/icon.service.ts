@@ -6,12 +6,19 @@ import { DomSanitizer } from '@angular/platform-browser';
 export const Icons = [
   'arrow-down',
   'arrow-up',
+  'arrow-right',
   'user',
   'close',
   'menu',
   'bag',
   'love',
-  'search']
+  'search',
+  'info',
+  'facebook',
+  'instagram',
+  'twitter',
+  'pinterest'
+]
 
 @Injectable({
   providedIn: 'root'
