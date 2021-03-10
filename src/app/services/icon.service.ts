@@ -2,7 +2,16 @@ import { Injectable } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 
-export const Icons = ['arrow-down', 'arrow-up', 'user']
+/* .svg names and keys must be the same */
+export const Icons = [
+  'arrow-down',
+  'arrow-up',
+  'user',
+  'close',
+  'menu',
+  'bag',
+  'love',
+  'search']
 
 @Injectable({
   providedIn: 'root'
