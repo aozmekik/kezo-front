@@ -143,6 +143,13 @@ $border-thin: 0.1em solid white;
             margin: 0;
         }
 
+        .col:first-child {
+            border-left: $border-thin;
+            border-left-color: gray;
+            margin-bottom: 12em;
+            padding-left: 2em;
+        }
+
         .desktop {
             display: flex;
         }
@@ -151,10 +158,5 @@ $border-thin: 0.1em solid white;
     .first-section,
     .second-section {
         border-width: 0;
-    }
-
-    .first-section {
-        border-right: $border-thin;
-        border-right-color: gray;
     }
 }
