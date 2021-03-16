@@ -65,39 +65,53 @@
     </mat-sidenav>
 
     <mat-sidenav-content>
-        <div id="nav-bar" class="row no-gutters" [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}">
-            <div id="mobile-left" class="col-3">
-                <button (click)="sidenav.toggle()">
-                    <mat-icon id="menu" svgIcon="menu"></mat-icon>
-                </button>
-            </div>
-            <div id='mobile-center' class="col-6">
-                <ng-container *ngTemplateOutlet="logo"></ng-container>
-            </div>
+        <div class="baba" [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}">
+            <div id="nav-bar" class="row no-gutters">
+                <div id="mobile-left" class="col-3">
+                    <button (click)="sidenav.toggle()">
+                        <mat-icon id="menu" svgIcon="menu"></mat-icon>
+                    </button>
+                </div>
+                <div id='mobile-center' class="col-6">
+                    <ng-container *ngTemplateOutlet="logo"></ng-container>
+                </div>
 
-            <div id="desktop-mid" class="col-xl-10">
-                <ul>
-                    <li>
-                        <ng-container *ngTemplateOutlet="logo"></ng-container>
-                    </li>
-                    <li><a href="">New</a></li>
-                    <li><a href="">Bras</a></li>
-                    <li><a href="">Panties</a></li>
-                    <li><a href="">Lingerie</a></li>
-                    <li><a href="">Sleep & Lounge</a></li>
-                    <li><a href="">Sexy Extras</a></li>
-                    <li><a href="">Collabs</a></li>
-                    <li><a href="">Clearance</a></li>
-                </ul>
-            </div>
+                <div id="desktop-mid" class="col-xl-10">
+                    <ul>
+                        <li>
+                            <ng-container *ngTemplateOutlet="logo"></ng-container>
+                        </li>
+                        <li class="dropdown"><a class="test1" href="">New</a>
 
-            <div id="most-right" class="col-3 col-xl-2">
-                <mat-icon id="bag" svgIcon="bag"></mat-icon>
-                <mat-icon id="love" svgIcon="love"></mat-icon>
-                <mat-icon id="search" svgIcon="search"></mat-icon>
+                            <div class="dropdown-content">
+                                <app-dropdown-menu></app-dropdown-menu>
+                            </div>
+                        </li>
+                        <li><a href="">Bras</a></li>
+                        <li><a href="">Panties</a></li>
+                        <li><a href="">Lingerie</a></li>
+                        <li><a href="">Sleep & Lounge</a></li>
+                        <li><a href="">Sexy Extras</a></li>
+                        <li><a href="">Collabs</a></li>
+                        <li><a href="">Clearance</a></li>
+                    </ul>
+                </div>
+
+                <div id="most-right" class="col-3 col-xl-2">
+                    <mat-icon id="bag" svgIcon="bag"></mat-icon>
+                    <mat-icon id="love" svgIcon="love"></mat-icon>
+                    <mat-icon id="search" svgIcon="search"></mat-icon>
+                </div>
+
             </div>
         </div>
     </mat-sidenav-content>
 </mat-sidenav-container>
 
 <ng-template #logo><img src="assets/logo/logo.png" alt=""></ng-template>
+
+
+
+<!-- {{show}}
+<br>
+{{neverIn}} -->
