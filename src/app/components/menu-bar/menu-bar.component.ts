@@ -13,6 +13,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 export class MenuBarComponent implements OnInit {
   isSticky: boolean = false;
   show: boolean = false;
+  sideShow: boolean = false;
 
   @ViewChild('sidenav') sidenav!: MatSidenav;
   constructor() { }
@@ -40,6 +41,11 @@ export class MenuBarComponent implements OnInit {
     if (this.sidenav.opened && window.innerWidth >= 1200) {
       this.sidenav.toggle();
     }
+  }
+
+  toggleMenu()
+  {
+    this.sideShow = !this.sideShow;
   }
 
 

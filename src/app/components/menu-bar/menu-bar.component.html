@@ -16,10 +16,29 @@
                 <div class="col-10">Log In / Sign Up</div>
                 <mat-icon class="col-2">arrow_right</mat-icon>
             </button>
-            <button class="row">
+            <button (click)="toggleMenu()" class="row">
                 <div class="col-10">New</div>
-                <mat-icon class="col-2">add</mat-icon>
+
+                <div *ngIf="!sideShow; then thenBlock else elseBlock"></div>
+                <ng-template #thenBlock>
+                    <mat-icon class="col-2">add</mat-icon>
+                </ng-template>
+                <ng-template #elseBlock>
+                    <mat-icon class="col-2">remove</mat-icon>
+                </ng-template>
             </button>
+
+            <div *ngIf="sideShow">
+                <ul>
+                    <li><a href="">Best Sellers</a></li>
+                    <li><a href="">Red Hot</a></li>
+                    <li><a href="">Lounge Sexy</a></li>
+                    <li><a href="">More Wine Plz</a></li>
+                    <li><a href="">Smooth & Sexy</a></li>
+                </ul>
+            </div>
+
+
             <button class="row">
                 <div class="col-10">Bras</div>
                 <mat-icon class="col-2">add</mat-icon>
