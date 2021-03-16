@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -15,6 +15,8 @@ import { DropdownMenuComponent } from './components/menu-bar/dropdown-menu/dropd
 import { FooterComponent } from './components/footer/footer.component';
 import { TestComponent } from './components/test/test.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { LoginComponent } from './components/login/login.component';
+import { SignInDialogComponent } from './components/promotion-bar/sign-in-dialog/sign-in-dialog.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { HighlightDirective } from './directives/highlight.directive';
     DropdownMenuComponent,
     FooterComponent,
     TestComponent,
-    HighlightDirective
+    HighlightDirective,
+    LoginComponent,
+    SignInDialogComponent
   ],
   imports: [
     BrowserModule,

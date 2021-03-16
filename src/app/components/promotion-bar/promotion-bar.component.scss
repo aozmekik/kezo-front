@@ -20,6 +20,19 @@ button {
     margin: 0;
 }
 
+#right-button {
+    cursor: pointer;
+    float: right;
+    padding-right: 2em;
+}
+
+#sign-in-dialog {
+    position: fixed;
+    background-color: white;
+    z-index: 100;
+    margin: 2.5em 0 0 0;
+}
+
 .wrapper {
     background-color: black;
     padding: 1em 0 1em 0; /* expand header */
@@ -57,7 +70,6 @@ img {
 #desktop-right {
     font-family: helveticalight, Helvetica, Arial, sans-serif;
     text-align: right;
-    padding-right: 4em;
 }
 
 #user-icon {

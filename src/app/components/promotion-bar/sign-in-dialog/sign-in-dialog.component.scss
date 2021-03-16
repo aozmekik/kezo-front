@@ -1,0 +1,52 @@
+* {
+    /* outlines for debugging */
+    // outline-style: dashed;
+    // outline-color: red;
+    // outline-width: 0.15em;
+    font-size: 18px;
+}
+
+.container {
+    padding: 1em;
+    color: black;
+    text-align: left !important;
+}
+
+.row {
+    border-bottom: 0.1em solid black;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+    height: 1.5em;
+    float: left;
+}
+
+h5 {
+    margin: 1em 0 0 0;
+}
+
+a {
+    color: black;
+    font-size: 12px;
+}
+
+mat-icon {
+    font-size: 32px;
+    float: right;
+}
+
+button {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    overflow: hidden;
+    outline: none;
+    padding: 0 0.2em 0 0;
+    margin-bottom: 0.5em;
+    float: right;
+}

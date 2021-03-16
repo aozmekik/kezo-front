@@ -7,8 +7,16 @@
         COVID-19 Response - Bras & Bralettes TL 177,56 - Panties 5/TL337,37
     </div>
     <div id="desktop-right" class="col-lg-3">
-        <div id="desktop-right-text"> Log In/ Sign Up</div>
-        <mat-icon id="user-icon" svgIcon="user"></mat-icon>
+        <button id="right-button" (click)="toggleSignIn()" class="col-lg-9 col-xl-7">
+            <div id="desktop-right-text"> Log In/ Sign Up</div>
+            <mat-icon id="user-icon" svgIcon="user"></mat-icon>
+        </button>
+    </div>
+
+    <div class="row justify-content-end">
+        <div id="sign-in-dialog" class="col-3" *ngIf="signInDialog">
+            <app-sign-in-dialog (newItemEvent)="toggleSignIn()" ></app-sign-in-dialog>
+        </div>
     </div>
 
     <!-- mobile design -->
