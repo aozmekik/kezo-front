@@ -1,0 +1,67 @@
+* {
+    /* outlines for debugging */
+    // outline-style: dashed;
+    // outline-color: red;
+    // outline-width: 0.1em;
+    // font-size: 18px;
+}
+
+.wrapper {
+    margin: 1em;
+}
+
+h1 {
+    font-family: helveticaregular, Helvetica, Arial, sans-serif;
+    border-bottom: 0.01em solid #cccccc;
+    text-align: left;
+    padding: 0;
+    margin: 1em 0 0 0;
+}
+
+h2 {
+    margin: 1em 0 0.5em 0;
+}
+
+label {
+    font-weight: 400;
+}
+
+button {
+    margin-top: 2em;
+}
+
+label {
+    margin: 1em 0 0 0;
+}
+
+input {
+    margin-top: 0.5em;
+}
+
+.checkbox {
+    margin-top: 1em;
+    padding: 0;
+}
+
+a {
+    color: black;
+    font-family: helveticaregular, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+
+#last {
+    display: block;
+    margin-top: 3em;
+}
+
+#benefits {
+    display: none;
+}
+
+/* large devices */
+@media screen and (min-width: 992px) {
+    #benefits {
+        margin-top: 3em;
+        display: block;
+    }
+}

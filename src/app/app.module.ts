@@ -5,6 +5,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +18,7 @@ import { TestComponent } from './components/test/test.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { LoginComponent } from './components/login/login.component';
 import { SignInDialogComponent } from './components/promotion-bar/sign-in-dialog/sign-in-dialog.component';
+import { CheckboxComponent } from './components/checkbox/checkbox.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { SignInDialogComponent } from './components/promotion-bar/sign-in-dialog
     TestComponent,
     HighlightDirective,
     LoginComponent,
-    SignInDialogComponent
+    SignInDialogComponent,
+    CheckboxComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,9 @@ import { SignInDialogComponent } from './components/promotion-bar/sign-in-dialog
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

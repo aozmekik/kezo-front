@@ -1,1 +1,62 @@
-<p>login works!</p>
+<div class="wrapper row no-gutters justify-content-center">
+    <div class="col-12 col-lg-11 col-xl-9">
+        <h1>
+            My Account Log In
+        </h1>
+
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <h2>
+                    Returning Customers
+                </h2>
+
+                If you are a registered user, please enter your email and password.
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <label>EMAIL ADDRESS *</label>
+                    <input type="email" formControlName="email">
+                    <label>PASSWORD *</label>
+                    <input type="password" formControlName="password">
+                    <button type="submit">LOG IN</button>
+
+                    <div class="checkbox col-4 col-md-3">
+                        <app-checkbox (checkedEvent)="setChecked($event)" label="Remember Me"></app-checkbox>
+                    </div>
+                    <a href="">Forgot Password?</a>
+                </form>
+
+                <div id="benefits">
+                    <h3>Benefits of Creating an Account</h3>
+                    <h4>News and Exclusive Offers!</h4>
+                    Sign up to receive email updates for the sexiest deals, trend alerts & hot new arrivals.
+                    <h4>Order History</h4>
+                    Receive important information about your order.
+                    <h4>Faster Checkout</h4>
+                    Save your billing and shipping information or add items to your Love It list to make checkout
+                    easier.
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <h2>New Customers</h2>
+                Creating an account is easy. Just fill out the form below and enjoy the benefits of being a registered
+                customer.
+
+                <form>
+                    <button>CREATE ACCOUNT NOW</button>
+                </form>
+
+                <h2>Check Order</h2>
+                See your order even if you are not a registered user. Enter the order number and email address.
+                <form [formGroup]="orderForm">
+                    <label>ORDER NUMBER *</label>
+                    <input type="number" formControlName="number">
+                    <label>ORDER EMAIL *</label>
+                    <input type="email" formControlName="email">
+                    <button>CHECK STATUS</button>
+                </form>
+
+                <a id="last" href="">See Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</div>

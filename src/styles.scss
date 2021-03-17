@@ -1,19 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* reset styling */
-@import '~normalize.css';
+@import "~normalize.css";
 
 /* boostrap */
-@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~bootstrap/dist/css/bootstrap.min.css";
 
 /* materials icons */
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
-
 // TODO. maybe carry this fonts to another .scss file.
 
 /* prevent overflowing in x-scroll */
-html, body {
+html,
+body {
     max-width: 100%;
     overflow-x: hidden;
 }
@@ -33,7 +33,45 @@ html, body {
     src: url("assets/font/helvetica/helvetica-light-587ebe5a59211.ttf") format("truetype");
 }
 
+form {
+    /* custom input box */
+    input {
+        padding: 0.7em;
+        border-radius: 0;
+        border: 0.1em solid #cccccc;
+        width: 100%;
+        font-size: 12px;
+        font-family: helveticaregular, Helvetica, Arial, sans-serif;
+    }
 
+    input:focus {
+        outline: none;
+        border-color: black;
+    }
+
+    /* custom button */
+    button {
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 1em;
+        width: 50%;
+    }
+
+    @keyframes fadeIn {
+        100% {
+            opacity: 0.5;
+        }
+        0% {
+            opacity: 1;
+        }
+    }
+
+    button:hover {
+        animation: fadeIn ease 0.5s;
+        opacity: 0.5;
+    }
+}
 
 // html, body { height: 100%; }
 // body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
