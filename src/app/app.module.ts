@@ -6,6 +6,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +20,7 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { LoginComponent } from './components/login/login.component';
 import { SignInDialogComponent } from './components/promotion-bar/sign-in-dialog/sign-in-dialog.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
     LoginComponent,
     SignInDialogComponent,
     CheckboxComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,

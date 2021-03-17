@@ -33,7 +33,20 @@ body {
     src: url("assets/font/helvetica/helvetica-light-587ebe5a59211.ttf") format("truetype");
 }
 
+/* custom item options */
+
+h1 {
+    font-family: helveticaregular, Helvetica, Arial, sans-serif;
+    border-bottom: 0.01em solid #cccccc;
+    text-align: left;
+    padding: 0;
+    margin: 1em 0 0 0;
+}
+
 form {
+    label {
+        font-weight: 700;
+    }
     /* custom input box */
     input {
         padding: 0.7em;
@@ -44,9 +57,33 @@ form {
         font-family: helveticaregular, Helvetica, Arial, sans-serif;
     }
 
+    select {
+        padding: 0.7em;
+        border-radius: 0;
+        border: 0.1em solid #cccccc;
+        background-color: transparent;
+        width: 100%;
+        font-weight: 700;
+
+        option {
+            font-weight: 700;
+        }
+    }
+
+    a {
+        color: black;
+        font-family: helveticaregular, Helvetica, Arial, sans-serif;
+        font-size: 12px;
+        outline: none;
+    }
+
     input:focus {
         outline: none;
         border-color: black;
+    }
+
+    select:focus {
+        outline: none;
     }
 
     /* custom button */

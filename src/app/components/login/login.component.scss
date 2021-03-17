@@ -10,28 +10,17 @@
     margin: 1em;
 }
 
-h1 {
-    font-family: helveticaregular, Helvetica, Arial, sans-serif;
-    border-bottom: 0.01em solid #cccccc;
-    text-align: left;
-    padding: 0;
-    margin: 1em 0 0 0;
-}
-
 h2 {
     margin: 1em 0 0.5em 0;
 }
 
 label {
+    margin: 1em 0 0 0;
     font-weight: 400;
 }
 
 button {
     margin-top: 2em;
-}
-
-label {
-    margin: 1em 0 0 0;
 }
 
 input {
@@ -41,12 +30,6 @@ input {
 .checkbox {
     margin-top: 1em;
     padding: 0;
-}
-
-a {
-    color: black;
-    font-family: helveticaregular, Helvetica, Arial, sans-serif;
-    font-size: 12px;
 }
 
 #last {

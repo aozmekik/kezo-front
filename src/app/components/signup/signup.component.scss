@@ -1,0 +1,52 @@
+* {
+    /* outlines for debugging */
+    // outline-style: dashed;
+    // outline-color: red;
+    // outline-width: 0.1em;
+    // font-size: 18px;
+}
+
+.wrapper {
+    margin: 1em;
+}
+
+label {
+    margin: 1em 0 0 0;
+    padding: 0;
+}
+
+button {
+    margin-top: 1em;
+}
+
+#desktop-left {
+    display: none;
+}
+
+/* large devices */
+@media screen and (min-width: 992px) {
+    #desktop-left {
+        display: initial;
+    }
+
+    input:not(:first-child) {
+        margin-top: 3em;
+    }
+
+    #my-account {
+        padding: 1em 0;
+        background-color: #efefef;
+    }
+
+    #create-account {
+        padding: 1em 0;
+        border-bottom: 0.05em solid gray;
+        a {
+            color: black;
+        }
+    }
+
+    #right {
+        padding-left: 2em;
+    }
+}
