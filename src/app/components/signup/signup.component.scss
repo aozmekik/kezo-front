@@ -7,11 +7,15 @@
 }
 
 .wrapper {
-    margin: 1em;
+    margin: 0 0 1em 0;
+}
+
+.form-row {
+    margin-top: 1em;
 }
 
 label {
-    margin: 1em 0 0 0;
+    margin: 0 0 0 0;
     padding: 0;
 }
 
@@ -23,30 +27,59 @@ button {
     display: none;
 }
 
+a {
+    font-family: helvetica, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+a:hover {
+    color: black;
+}
+
+#right {
+    padding-left: 4em;
+    margin-top: 2em;
+
+    form {
+        padding-right: 6em;
+    }
+}
+
 /* large devices */
 @media screen and (min-width: 992px) {
     #desktop-left {
         display: initial;
-    }
-
-    input:not(:first-child) {
-        margin-top: 3em;
+        padding: 0 1em;
     }
 
     #my-account {
-        padding: 1em 0;
+        padding: 1em 1em;
         background-color: #efefef;
     }
 
-    #create-account {
-        padding: 1em 0;
-        border-bottom: 0.05em solid gray;
-        a {
-            color: black;
-        }
+    .heading {
+        font-family: helvetica, Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        font-size: 18px;
     }
 
-    #right {
-        padding-left: 2em;
+    #create-account {
+        padding: 1em;
+        border-bottom: 0.05em solid gray;
+    }
+
+    a {
+        color: black;
+    }
+
+    #live-chat {
+        margin-top: 1em;
+    }
+
+    #contact-us {
+        padding: 1em;
+        font-family: helvetica, Arial, Helvetica, sans-serif;
+        font-size: 12px;
     }
 }

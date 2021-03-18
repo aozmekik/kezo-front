@@ -9,6 +9,8 @@
 /* materials icons */
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
+@import url(//db.onlinewebfonts.com/c/a64ff11d2c24584c767f6257e880dc65?family=Helvetica);
+
 // TODO. maybe carry this fonts to another .scss file.
 
 /* prevent overflowing in x-scroll */
@@ -18,35 +20,75 @@ body {
     overflow-x: hidden;
 }
 
+* {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.6px;
+}
+
 @font-face {
     font-family: helveticaregular;
-    src: url("assets/font/helvetica/regular.otf") format("opentype");
+    src: url("assets/font/helvetica/helveticaregular.otf") format("opentype");
 }
 
 @font-face {
     font-family: helveticabold;
-    src: url("assets/font/helvetica/helvetica-rounded-bold-5871d05ead8de.otf") format("truetype");
+    src: url("assets/font/helvetica/helveticabold.otf") format("opentype");
 }
 
 @font-face {
     font-family: helveticalight;
-    src: url("assets/font/helvetica/helvetica-light-587ebe5a59211.ttf") format("truetype");
+    src: url("assets/font/helvetica/helveticalight.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: helvetica;
+    src: url("assets/font/helvetica/helvetica.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: futuraptbold;
+    src: url("assets/font/futurapt/futuraptbold.ttf") format("truetype");
 }
 
 /* custom item options */
 
 h1 {
-    font-family: helveticaregular, Helvetica, Arial, sans-serif;
     border-bottom: 0.01em solid #cccccc;
     text-align: left;
-    padding: 0;
+    padding: 0 0 0.1em 0;
     margin: 1em 0 0 0;
+    font-family: helvetica, Helvetica, Arial, sans-serif !important;
+    font-size: 36px !important;
+    font-weight: 500 !important;
+}
+
+h2,
+h3,
+h4 {
+    font-family: helveticabold, Helvetica, Arial, sans-serif !important;
+    font-weight: 700 !important;
+}
+
+h2 {
+    font-size: 30px !important;
+}
+
+h3 {
+    font-size: 24px !important;
+}
+
+h4 {
+    font-size: 15px !important;
 }
 
 form {
     label {
-        font-weight: 700;
+        font-family: futuraptbold, Arial, Helvetica, sans-serif !important;
+        font-size: 12px !important;
+        font-weight: 900 !important;
     }
+
     /* custom input box */
     input {
         padding: 0.7em;
@@ -91,8 +133,10 @@ form {
         background-color: black;
         color: white;
         border: none;
-        padding: 1em;
-        width: 50%;
+        padding: 1.5em;
+        font-family: futuraptbold, Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 900;
     }
 
     @keyframes fadeIn {

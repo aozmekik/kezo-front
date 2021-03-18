@@ -8,14 +8,14 @@
     </div>
     <div id="desktop-right" class="col-lg-3">
         <button id="right-button" (click)="toggleSignIn()" class="col-lg-9 col-xl-7">
-            <div id="desktop-right-text"> Log In/ Sign Up</div>
+            <div id="desktop-right-text"> Log In / Sign Up</div>
             <mat-icon id="user-icon" svgIcon="user"></mat-icon>
         </button>
     </div>
 
     <div class="row justify-content-end">
-        <div id="sign-in-dialog" class="col-3" *ngIf="signInDialog">
-            <app-sign-in-dialog (newItemEvent)="toggleSignIn()" ></app-sign-in-dialog>
+        <div id="sign-in-dialog" *ngIf="signInDialog">
+            <app-sign-in-dialog (newItemEvent)="toggleSignIn()"></app-sign-in-dialog>
         </div>
     </div>
 

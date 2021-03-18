@@ -1,60 +1,84 @@
 <div class="wrapper row no-gutters justify-content-center">
-    <div id="desktop-left"  class="col-lg-4 col-xl-4">
-        <div id="my-account">
+    <div id="desktop-left" class="col-lg-4 col-xl-3">
+        <div class="heading" id="my-account">
             My Account
         </div>
         <div id="create-account">
             <a href="">Create an Account</a>
         </div>
 
-        <h2>Contact Us</h2>
-        <a href="">Live Chat Online</a>
-        <br>
-        Canadian + U.S. callers:+1-888-527-3692
-        <br>
-
-        International callers:+1 614-452-5501
-        <br>
-        We are available:
-        <br>
-        Monday - Friday; 10 AM – 6:30 PM ET
-        <br>
-        Saturday - Sunday: Closed
-        <br>
-        Privacy Policy
+        <div id="contact-us">
+            <div class="heading">Contact Us</div>
+            <div id="live-chat"><a href="">Live Chat Online</a></div>
+            <br>
+            <b>
+                Canadian + U.S. callers: </b>+1-888-527-3692
+            <br>
+            <b>
+                International callers: </b>+1 614-452-5501
+            <br>
+            We are available:
+            <br>
+            Monday - Friday; 10 AM – 6:30 PM ET
+            <br>
+            Saturday - Sunday: Closed
+            <br>
+            <a href="">Privacy Policy</a>
+        </div>
 
     </div>
     <div id="right" class="col-12 col-lg-8 col-xl-6">
         <h1>Create Account</h1>
 
         <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
-            <label class="col-12 col-lg-4">FIRST NAME *</label>
-            <input class="col-12 col-lg-8" type="text" formControlName="firstName">
-
-            <label class="col-12 col-lg-4">LAST NAME *</label>
-            <input class="col-12 col-lg-8" type="text" formControlName="lastName">
-
-
-            <label class="col-12 col-lg-4">EMAIL *</label>
-            <input class="col-12 col-lg-8" type="email" formControlName="email">
-
-            <label class="col-12 col-lg-4">CONFIRM EMAIL *</label>
-            <input class="col-12 col-lg-8" type="email" formControlName="confirmEmail">
-
-            <label class="col-12 col-lg-4">PASSWORD *</label>
-            <input class="col-12 col-lg-8" type="password" formControlName="password">
-
-            <label class="col-12 col-lg-4">CONFIRM PASSWORD *</label>
-            <input class="col-12 col-lg-8" type="password" formControlName="confirmPassword">
-            <a href="">Password Help</a>
-
-            <div class="checkbox">
-                <app-checkbox (checkedEvent)="setChecked($event)"
-                    label="Sign me up for Kezokino's email and postal mail offers and news"></app-checkbox>
+            <div class="form-row row no-gutters">
+                <label class="col-12 col-lg-3 my-auto">FIRST NAME *</label>
+                <input class="col-12 col-lg-6" type="text" formControlName="firstName">
             </div>
 
-            <button class="col-12">APPLY</button>
+            <div class="form-row row no-gutters">
+                <label class="col-12 col-lg-3 my-auto">LAST NAME *</label>
+                <input class="col-12 col-lg-6" type="text" formControlName="lastName">
+            </div>
 
+
+            <div class="form-row row no-gutters">
+                <label class="col-12 col-lg-3 my-auto">EMAIL *</label>
+                <input class="col-12 col-lg-6" type="email" formControlName="email">
+            </div>
+
+
+            <div class="form-row row no-gutters">
+                <label class="col-12 col-lg-3 my-auto">CONFIRM EMAIL *</label>
+                <input class="col-12 col-lg-6" type="email" formControlName="confirmEmail">
+            </div>
+
+            <div class="form-row row no-gutters">
+                <label class="col-12 col-lg-3 my-auto">PASSWORD *
+                    <div>
+                        <a href="">Password Help</a>
+                    </div>
+                </label>
+                <input class="col-12 col-lg-6" type="password" formControlName="password">
+            </div>
+
+            <div class="form-row row no-gutters">
+                <label class="col-12 col-lg-3">CONFIRM PASSWORD *</label>
+                <input class="col-12 col-lg-6" type="password" formControlName="confirmPassword">
+            </div>
+
+            <div class="form-row row">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
+                    <app-checkbox (checkedEvent)="setChecked($event)"
+                        label="Sign me up for Kezokino's email and postal mail offers and news"></app-checkbox>
+                </div>
+            </div>
+
+            <div class="form-row row no-gutters">
+                <div class="col-lg-3"></div>
+                <button class="col-lg-4">APPLY</button>
+            </div>
         </form>
     </div>
 

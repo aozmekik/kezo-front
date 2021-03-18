@@ -13,7 +13,6 @@ $border-thin: 0.1em solid white;
     padding-top: 2em;
     background-color: black;
     color: white;
-    font-family: Helvetica, Arial, sans-serif;
     padding-right: 1em;
     padding-left: 1em;
 }
@@ -21,6 +20,10 @@ $border-thin: 0.1em solid white;
 .first-section {
     border-top: $border-thick;
     padding: 1em;
+
+    span {
+        font-family: helveticaregular, Arial, Helvetica, sans-serif;
+    }
 
     .row {
         margin-top: 1em;
@@ -110,18 +113,23 @@ $border-thin: 0.1em solid white;
     padding: 0.5em;
     border-top: $border-thin;
     border-color: gray;
+    font-family: helveticaregular, Arial, Helvetica, sans-serif;
+    font-size: 10px;
 }
 
 /* large devices */
 @media screen and (min-width: 992px) {
-    
-
     .third-section {
         margin-top: 1em;
         clear: both;
     }
 
     .second-section {
+        .col {
+            font-family: helvatica, Arial, Helvetica, sans-serif;
+            font-size: 12px;
+        }
+
         button {
             display: none;
         }
@@ -132,6 +140,8 @@ $border-thin: 0.1em solid white;
         }
         a {
             color: white;
+            font-family: helveticalight, Arial, Helvetica, sans-serif;
+            font-size: 11px;
         }
 
         li {

@@ -7,11 +7,24 @@
 }
 
 .wrapper {
-    margin: 1em;
+    margin: 2.5em;
+}
+
+* {
+    font-family: helvetica, Arial, Helvetica, sans-serif;
+    font-size: 12px;
 }
 
 h2 {
     margin: 1em 0 0.5em 0;
+}
+
+h4 {
+    margin: 1em 0 1em 0;
+}
+
+#forgot-password {
+    margin-top: 1.5em;
 }
 
 label {
@@ -35,6 +48,7 @@ input {
 #last {
     display: block;
     margin-top: 3em;
+    color: black;
 }
 
 #benefits {
@@ -46,5 +60,9 @@ input {
     #benefits {
         margin-top: 3em;
         display: block;
+    }
+
+    .checkbox {
+        padding: 1.8em 0 0 1em;
     }
 }

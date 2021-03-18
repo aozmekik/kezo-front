@@ -23,14 +23,15 @@ button {
 #right-button {
     cursor: pointer;
     float: right;
-    padding-right: 2em;
+    margin-right: 4em;
 }
 
 #sign-in-dialog {
     position: fixed;
     background-color: white;
     z-index: 100;
-    margin: 2.5em 0 0 0;
+    margin: 2.5em 4em 0 0;
+    width: 300px;
 }
 
 .wrapper {
@@ -51,7 +52,9 @@ img {
 #desktop-left {
     display: block;
     font-family: helveticaregular, Helvetica, Arial, sans-serif;
-    padding-left: 4em;
+    padding-left: 2em;
+    line-height: 18px;
+    font-size: 12px;
 }
 
 .mid-text {
@@ -68,7 +71,6 @@ img {
 }
 
 #desktop-right {
-    font-family: helveticalight, Helvetica, Arial, sans-serif;
     text-align: right;
 }
 
@@ -81,6 +83,9 @@ img {
 
 #desktop-right-text {
     float: right;
+    margin-top: 0.2em;
+    font-family: helveticalight;
+    line-height: 18px;
 }
 
 #mobile-mid {

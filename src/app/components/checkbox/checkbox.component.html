@@ -1,4 +1,4 @@
-<label>{{label}}
+<label [style.font-weight]="isChecked?700:400" >{{label}}
     <input [(ngModel)]="isChecked" (change)="setChecked()" type="checkbox">
     <span class="checkmark"></span>
 </label>

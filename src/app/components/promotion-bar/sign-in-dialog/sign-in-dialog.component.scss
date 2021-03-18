@@ -24,15 +24,27 @@ h3 {
     padding: 0;
     height: 1.5em;
     float: left;
+    font-size: 18px;
+    font-family: helveticabold, Helvetica, Arial, sans-serif;
+    font-weight: 700;
 }
 
-h5 {
+h5:first-of-type {
     margin: 1em 0 0 0;
+}
+
+h5:last-of-type {
+    margin: 0.5em 0 0 0;
 }
 
 a {
     color: black;
-    font-size: 12px;
+    font-family: helvetica, Helvetica, Arial, sans-serif;
+    font-size: 11px;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 mat-icon {
