@@ -12,61 +12,43 @@
                 </div>
 
             </div>
-            <button class="row no-gutters">
+            <button (click)="toggleMenu('login')" class="row">
                 <div class="col-10">Log In / Sign Up</div>
-                <mat-icon id="right" class="col-2">arrow_right</mat-icon>
-            </button>
-            <button (click)="toggleMenu()" class="row">
-                <div class="col-10">New</div>
 
-                <div *ngIf="!sideShow; then thenBlock else elseBlock"></div>
+                <div *ngIf="!sideShow['login']; then thenBlock else elseBlock"></div>
                 <ng-template #thenBlock>
-                    <mat-icon class="col-2">add</mat-icon>
+                    <mat-icon class="col-2 right">arrow_right</mat-icon>
                 </ng-template>
                 <ng-template #elseBlock>
-                    <mat-icon class="col-2">remove</mat-icon>
+                    <mat-icon class="col-2 right">arrow_drop_down</mat-icon>
                 </ng-template>
+                
+
             </button>
 
-            <div *ngIf="sideShow">
-                <ul>
-                    <li><a href="">Best Sellers</a></li>
-                    <li><a href="">Red Hot</a></li>
-                    <li><a href="">Lounge Sexy</a></li>
-                    <li><a href="">More Wine Plz</a></li>
-                    <li><a href="">Smooth & Sexy</a></li>
-                </ul>
-            </div>
+            <ul *ngIf="sideShow['login']" class="mobile-dropdown">
+                <li><a routerLink="/login" routerLinkActive="active">Log In</a></li>
+                <li><a routerLink="/signup" routerLinkActive="active">Sign Up</a></li>
+            </ul>
 
+            <ng-container *ngFor="let key of mainCategory;">
+                <button (click)="toggleMenu(key)" class="row">
 
-            <button class="row">
-                <div class="col-10">Bras</div>
-                <mat-icon class="col-2">add</mat-icon>
-            </button>
-            <button class="row">
-                <div class="col-10">Panties</div>
-                <mat-icon class="col-2">add</mat-icon>
-            </button>
-            <button class="row">
-                <div class="col-10">Lingerie</div>
-                <mat-icon class="col-2">add</mat-icon>
-            </button>
-            <button class="row">
-                <div class="col-10">Sleep & Lounge</div>
-                <mat-icon class="col-2">add</mat-icon>
-            </button>
-            <button class="row">
-                <div class="col-10">Sexy Extras</div>
-                <mat-icon class="col-2">add</mat-icon>
-            </button>
-            <button class="row">
-                <div class="col-10">Collabs</div>
-                <mat-icon class="col-2">add</mat-icon>
-            </button>
-            <button class="row">
-                <div class="col-10">Clearance</div>
-                <mat-icon class="col-2">add</mat-icon>
-            </button>
+                    <div class="col-10">{{key}}</div>
+
+                    <div *ngIf="!sideShow[key]; then thenBlock else elseBlock"></div>
+                    <ng-template #thenBlock>
+                        <mat-icon class="col-2">add</mat-icon>
+                    </ng-template>
+                    <ng-template #elseBlock>
+                        <mat-icon class="col-2">remove</mat-icon>
+                    </ng-template>
+                </button>
+
+                <div class="mobile-dropdown" *ngIf="sideShow[key]">
+                    <app-dropdown-menu [desktop]="false" [categories]="categoryDict[key]"></app-dropdown-menu>
+                </div>
+            </ng-container>
 
             <button class="row">
                 <div class="col-2">
@@ -100,19 +82,14 @@
                         <li>
                             <ng-container *ngTemplateOutlet="logo"></ng-container>
                         </li>
-                        <li class="dropdown"><a class="test1" href="">New</a>
-
+                        <!-- <li><a href="">Yeni Ürünler</a></li>
+                        <li><a href="">İndirimdeki Ürünler</a></li> -->
+                        <li class="dropdown" *ngFor="let key of mainCategory;">
+                            <a href="">{{key}}</a>
                             <div class="dropdown-content">
-                                <app-dropdown-menu></app-dropdown-menu>
+                                <app-dropdown-menu [categories]="categoryDict[key]"></app-dropdown-menu>
                             </div>
                         </li>
-                        <li><a href="">Bras</a></li>
-                        <li><a href="">Panties</a></li>
-                        <li><a href="">Lingerie</a></li>
-                        <li><a href="">Sleep & Lounge</a></li>
-                        <li><a href="">Sexy Extras</a></li>
-                        <li><a href="">Collabs</a></li>
-                        <li><a href="">Clearance</a></li>
                     </ul>
                 </div>
 
@@ -128,4 +105,3 @@
 </mat-sidenav-container>
 
 <ng-template #logo><img src="assets/logo/logo.png" alt=""></ng-template>
-

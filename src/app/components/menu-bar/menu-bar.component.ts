@@ -1,3 +1,4 @@
+import { CategoryService } from './../../services/category.service';
 import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 
@@ -13,12 +14,20 @@ import { MatSidenav } from '@angular/material/sidenav';
 export class MenuBarComponent implements OnInit {
   isSticky: boolean = false;
   show: boolean = false;
-  sideShow: boolean = false;
+  sideShow: { [id: string] : boolean; } = {};
+
+  categoryDict: any;
+  mainCategory: Array<string> = Array<string>();
+
 
   @ViewChild('sidenav') sidenav!: MatSidenav;
-  constructor() { }
+  constructor(private categoryService: CategoryService) { }
 
   ngOnInit(): void {
+    this.getCategories();
+    for (let key in this.categoryDict) {
+      this.mainCategory.push(key);
+    }
   }
 
   @HostListener('window:scroll', ['$event'])
@@ -27,7 +36,7 @@ export class MenuBarComponent implements OnInit {
 
     // this is a workaround for dropdowns.
     if (this.isSticky)
-      (document.querySelector('.dropdown-content') as HTMLElement).style.marginTop = '0';
+      (document.querySelector('.dropdown-content') as HTMLElement).style.marginTop = '-10px';
     else {
       (document.querySelector('.dropdown-content') as HTMLElement).style.marginTop = `-${window.scrollY}px`;
     }
@@ -43,9 +52,12 @@ export class MenuBarComponent implements OnInit {
     }
   }
 
-  toggleMenu()
-  {
-    this.sideShow = !this.sideShow;
+  toggleMenu(key: string) {
+    this.sideShow[key] = !this.sideShow[key];
+  }
+
+  getCategories(): void {
+    this.categoryDict = this.categoryService.getCategories();
   }
 
 

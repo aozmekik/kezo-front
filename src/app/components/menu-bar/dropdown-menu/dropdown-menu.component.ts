@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-dropdown-menu',
@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DropdownMenuComponent implements OnInit {
 
-  private categories: string[] = [];
+  @Input() categories!: string[];
+  @Input() desktop: boolean = true;
+  readonly sliceSize = [0, 6, 12];
 
   constructor() { }
 

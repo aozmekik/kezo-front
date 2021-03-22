@@ -1,25 +1,19 @@
-<div id="wrapper" class="row justify-content-center">
-    <div class="col-2">
-        <ul>
-            <li><a href="">Shop All New Arrivals</a></li>
-            <li><a href="">Bras</a></li>
-            <li><a href="">Panties</a></li>
-            <li><a href="">Lingerie</a></li>
-            <li><a href="">Sleep & Lounge</a></li>
-        </ul>
+<div *ngIf="desktop; then thenBlock else elseBlock"></div>
 
+<ng-template #thenBlock>
+    <div id="wrapper" class="row justify-content-center">
+        <div class="col-2" *ngFor="let item of sliceSize">
+            <ul>
+                <li *ngFor="let cat of categories.slice(item, item+6)"><a href="">{{cat}}</a></li>
+            </ul>
+        </div>
+        <div class="col-2"></div>
     </div>
-    <div class="col-2">
-        <ul>
-            <li><a href="">Shop All #TRENDING NOW</a></li>
-            <li><a href="">Best Sellers</a></li>
-            <li><a href="">Red Hot</a></li>
-            <li><a href="">Lounge Sexy</a></li>
-            <li><a href="">More Wine Plz</a></li>
-            <li><a href="">Smooth & Sexy</a></li>
-        </ul>
-    </div>
-    <div class="col-2">3</div>
-    <div class="col-2">4</div>
+</ng-template>
 
-</div>
+
+<ng-template #elseBlock>
+    <ul id="sidenav">
+        <li *ngFor="let cat of categories"><a href="">{{cat}}</a></li>
+    </ul>
+</ng-template>
