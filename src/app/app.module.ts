@@ -6,7 +6,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatSelectModule } from '@angular/material/select';
+import { SwiperModule } from 'ngx-swiper-wrapper';
+import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
+import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,6 +23,12 @@ import { LoginComponent } from './components/login/login.component';
 import { SignInDialogComponent } from './components/promotion-bar/sign-in-dialog/sign-in-dialog.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { ProductComponent } from './components/product/product.component';
+import { RadioComponent } from './components/radio/radio.component';
+
+const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
+  direction: 'horizontal',
+};
 
 @NgModule({
   declarations: [
@@ -35,6 +43,8 @@ import { SignupComponent } from './components/signup/signup.component';
     SignInDialogComponent,
     CheckboxComponent,
     SignupComponent,
+    ProductComponent,
+    RadioComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,8 +56,12 @@ import { SignupComponent } from './components/signup/signup.component';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    SwiperModule
   ],
-  providers: [],
+  providers: [{
+    provide: SWIPER_CONFIG,
+    useValue: DEFAULT_SWIPER_CONFIG
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

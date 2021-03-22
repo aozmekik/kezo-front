@@ -41,8 +41,6 @@ export class MenuBarComponent implements OnInit {
       (document.querySelector('.dropdown-content') as HTMLElement).style.marginTop = `-${window.scrollY}px`;
     }
 
-
-    console.log(window.scrollX, window.scrollY);
   }
 
   @HostListener('window:resize', ['$event'])

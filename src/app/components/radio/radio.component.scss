@@ -1,0 +1,38 @@
+* {
+    /* outlines for debugging */
+    // outline-style: dashed;
+    // outline-color: red;
+    // outline-width: 0.1em;
+}
+
+
+.label {
+    font-family: futuraptbold, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 0;
+}
+
+#selected {
+    font-family: helveticalight, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin-left: 0.3em;
+    letter-spacing: 0.1px;
+}
+
+.select-box {
+    margin: 0 0.5em 0 0;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #cccccc;
+    background-color: transparent;
+}
+
+.selected {
+    background-color: black;
+    color: white;
+}
+
+.select-box:hover{
+    border-color: black;
+}

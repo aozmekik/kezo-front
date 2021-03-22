@@ -1,0 +1,9 @@
+<div>
+    <h3 class="label">{{label}}<span id="selected">{{selectList[selectedIndex]}}</span></h3>
+    <div class="row no-gutters">
+        <button (click)="onClick(i)" *ngFor="let item of selectList; index as i"
+            class="select-box no-gutters row justify-content-center" [ngClass]="{'selected': i === selectedIndex}">
+            <span class="my-auto">{{item}}</span>
+        </button>
+    </div>
+</div>

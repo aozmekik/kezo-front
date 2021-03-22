@@ -9,8 +9,6 @@
 /* materials icons */
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
-@import url(//db.onlinewebfonts.com/c/a64ff11d2c24584c767f6257e880dc65?family=Helvetica);
-
 // TODO. maybe carry this fonts to another .scss file.
 
 /* prevent overflowing in x-scroll */
@@ -52,8 +50,7 @@ body {
 }
 
 /* custom item options */
-
-h1 {
+.h1-form {
     border-bottom: 0.01em solid #cccccc;
     text-align: left;
     padding: 0 0 0.1em 0;
@@ -63,26 +60,27 @@ h1 {
     font-weight: 500 !important;
 }
 
-h2,
-h3,
-h4 {
+.h2-form,
+.h3-form,
+.h4-form {
     font-family: helveticabold, Helvetica, Arial, sans-serif !important;
     font-weight: 700 !important;
 }
 
-h2 {
+.h2-form {
     font-size: 30px !important;
 }
 
-h3 {
+.h3-form {
     font-size: 24px !important;
 }
 
-h4 {
+.h4-form {
     font-size: 15px !important;
 }
 
 form {
+
     label {
         font-family: futuraptbold, Arial, Helvetica, sans-serif !important;
         font-size: 12px !important;
@@ -152,6 +150,19 @@ form {
         animation: fadeIn ease 0.5s;
         opacity: 0.5;
     }
+}
+
+/* swiper styling */
+
+.swiper-pagination-bullet-active {
+    background: black !important;
+}
+
+.swiper-pagination-bullet {
+    opacity: 1;
+    border: white solid 0;
+    background-color: transparent;
+    margin: 0 0.5em 0 0;
 }
 
 // html, body { height: 100%; }

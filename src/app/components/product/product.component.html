@@ -1,0 +1,65 @@
+<div id="wrapper">
+
+
+    <swiper class="imgbox" [config]="config" [(index)]="index">
+        <div *ngFor="let img of imgs " class="swiper-slide">
+            <img class="center-fit" [src]="img">
+        </div>
+
+
+
+    </swiper>
+
+    <div id="pagination" class="row justify-content-center">
+        <div id="cpage"></div>
+    </div>
+
+    <div class="section">
+
+        <h2>Beyond Sexy</h2>
+        <h1>Push Up Bra</h1>
+        <div id="product-id">Item # 11169506</div>
+        <div id="price">TL425,68 - TL429,55</div>
+
+    </div>
+
+    <div class="section">
+
+        <div id="color">
+            <app-radio label="COLOR" [selectList]="sizes"></app-radio>
+        </div>
+        <div id="size">
+            <app-radio label="SIZE" [selectList]="sizes"></app-radio>
+        </div>
+        <button>Size Chart</button>
+    </div>
+
+
+    <div class="section row">
+        <input class="col-2" type="number">
+        <button class="col-10"></button>
+        Availability: Select Styles for Availability
+        <br><br>
+        Estimated Delivery Mar 30 - Apr 05
+        <br>
+        Free Delivery On Orders Over TL650
+    </div>
+
+    <div class="section">
+        <div class="label">DETAILS</div>
+        The #1 push up bra gives you killer cleavage and the ultimate WOW factor. With allover lace and gel push up
+        cups, you will look and feel amazing!
+
+        <ul>
+            <li>Gel push up cups for a sexy lift</li>
+            <li>Allover lace</li>
+            <li>Underwire for support</li>
+            <li>Extending lace</li>
+            <li>Adjustable bra straps that can be worn classic, crossed or racerback
+            </li>
+            <li>Back closure</li>
+            <li>Imported polyamide, elastane</li>
+        </ul>
+        <button>See More</button>
+    </div>
+</div>
