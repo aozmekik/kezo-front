@@ -12,6 +12,9 @@ export class ProductComponent implements OnInit {
   imgs: Array<string> = Array<string>();
 
   sizes: string[] = ['32', '34', '36', '38'];
+
+  isFav: boolean = false;
+  seeMore: boolean = false;
   
 
   config: SwiperConfigInterface = {
@@ -31,4 +34,12 @@ export class ProductComponent implements OnInit {
     this.imgs.push('assets/2.jpg');
   }
 
+
+  clickFav(){
+    this.isFav = !this.isFav;
+  }
+
+  clickSeeMore() {
+    this.seeMore = !this.seeMore;
+  }
 }

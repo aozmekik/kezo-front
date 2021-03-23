@@ -9,7 +9,6 @@
     margin-top: 2em;
 }
 
-
 .imgbox {
     position: relative;
 
@@ -23,11 +22,9 @@
     margin: auto;
 }
 
-
 #pagination {
     padding: 1em;
 }
-
 
 h2 {
     margin: 0;
@@ -42,9 +39,8 @@ h1 {
     font-size: 32px;
 }
 
-
 .section {
-    margin: 0.5em;
+    margin: 1.5em 0.5em 0 0.5em;
     border-bottom: 0.01em solid #cccccc;
     padding-bottom: 1.5em;
 }
@@ -64,7 +60,7 @@ h1 {
 }
 
 .label {
-    font-family: futuraptbold,  Arial, Helvetica, sans-serif;
+    font-family: futuraptbold, Arial, Helvetica, sans-serif;
     font-size: 12px;
 }
 
@@ -73,4 +69,91 @@ h1 {
     font-size: 12px;
     margin-left: 0.3em;
     letter-spacing: 0.1px;
+}
+
+mat-icon {
+    fill: #ff3eb5;
+    width: 1.6em;
+}
+
+#fav-button,
+#size-button {
+    background-color: transparent;
+    border: none;
+}
+
+#size-button {
+    margin-top: 1em;
+    padding: 0;
+    font-family: helvetica, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.radio {
+    margin-top: 1.5em;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input {
+    border: 1px solid #cccccc;
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #000;
+    line-height: 55px;
+}
+
+input:focus {
+    border-color: black;
+    outline: none;
+}
+
+#bag-button {
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding: 0;
+    height: 55px;
+    margin-left: -0.8em;
+}
+
+#availability,
+#detail {
+    margin-top: 1em;
+    font-family: helvetica, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+}
+
+#delivery {
+    margin-top: 1em;
+    color: #d10081;
+    font-weight: 500;
+}
+
+#detail, #detail-button {
+    color: #808080;
+}
+
+ul {
+    padding: 1.2em;
+}
+
+#detail-button {
+    font-family: helveticabold, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.1px;
+    text-align: left;
+    background-color: transparent;
+    border: none;
 }

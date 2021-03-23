@@ -12,6 +12,7 @@ export const Icons = [
   'menu',
   'bag',
   'love',
+  'love-filled',
   'search',
   'info',
   'facebook',

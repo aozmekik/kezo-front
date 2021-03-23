@@ -16,7 +16,19 @@
 
     <div class="section">
 
-        <h2>Beyond Sexy</h2>
+        <div class="row no-gutters">
+            <h2 class="col-11">Beyond Sexy</h2>
+            <button (click)="clickFav()" id="fav-button" class="col-1">
+                <div *ngIf="isFav; then thenBlock else elseBlock"></div>
+                <ng-template #thenBlock>
+                    <mat-icon svgIcon="love-filled"></mat-icon>
+                </ng-template>
+                <ng-template #elseBlock>
+                    <mat-icon svgIcon="love"></mat-icon>
+                </ng-template>
+            </button>
+        </div>
+
         <h1>Push Up Bra</h1>
         <div id="product-id">Item # 11169506</div>
         <div id="price">TL425,68 - TL429,55</div>
@@ -25,41 +37,57 @@
 
     <div class="section">
 
-        <div id="color">
+        <div class="radio">
             <app-radio label="COLOR" [selectList]="sizes"></app-radio>
         </div>
-        <div id="size">
+        <div class="radio">
             <app-radio label="SIZE" [selectList]="sizes"></app-radio>
         </div>
-        <button>Size Chart</button>
+        <button id="size-button">Size Chart</button>
     </div>
 
 
-    <div class="section row">
-        <input class="col-2" type="number">
-        <button class="col-10"></button>
-        Availability: Select Styles for Availability
-        <br><br>
-        Estimated Delivery Mar 30 - Apr 05
-        <br>
-        Free Delivery On Orders Over TL650
+    <div class="section row no-gutters">
+        <div class="col-2">
+            <input type="number">
+        </div>
+        <form class="col-10">
+            <button id="bag-button" class="col-12">ADD TO BAG</button>
+        </form>
+
+        <div id="availability">
+            Availability: Select Styles for Availability
+            <br>
+            <div id="delivery">
+                Estimated Delivery Mar 30 - Apr 05
+                <br>
+                Free Delivery On Orders Over TL650
+            </div>
+        </div>
     </div>
 
     <div class="section">
         <div class="label">DETAILS</div>
-        The #1 push up bra gives you killer cleavage and the ultimate WOW factor. With allover lace and gel push up
-        cups, you will look and feel amazing!
+        <div id="detail">
+            The #1 push up bra gives you killer cleavage and the ultimate WOW factor. With allover lace and gel push up
+            cups, you will look and feel amazing!
 
-        <ul>
-            <li>Gel push up cups for a sexy lift</li>
-            <li>Allover lace</li>
-            <li>Underwire for support</li>
-            <li>Extending lace</li>
-            <li>Adjustable bra straps that can be worn classic, crossed or racerback
-            </li>
-            <li>Back closure</li>
-            <li>Imported polyamide, elastane</li>
-        </ul>
-        <button>See More</button>
+            <ul *ngIf="!seeMore" >
+                <li>Gel push up cups for a sexy lift</li>
+                <li>Allover lace</li>
+                <li>Underwire for support</li>
+                <li>Extending lace</li>
+                <li>Adjustable bra straps that can be worn classic, crossed or racerback
+                </li>
+                <li>Back closure</li>
+                <li>Imported polyamide, elastane</li>
+            </ul>
+        </div>
+        <div class="row">
+            <button (click)="clickSeeMore()" class="col-12" id="detail-button">See {{seeMore?'Less':'More'}}</button>
+        </div>
     </div>
+
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem libero error officia quaerat hic iste praesentium
+    incidunt beatae aliquid ex assumenda quia sapiente quod nulla, ducimus et magni facilis debitis.
 </div>
