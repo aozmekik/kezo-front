@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import { NgxImageZoomModule } from 'ngx-image-zoom';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -56,7 +57,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    SwiperModule
+    SwiperModule,
+    NgxImageZoomModule,
   ],
   providers: [{
     provide: SWIPER_CONFIG,
