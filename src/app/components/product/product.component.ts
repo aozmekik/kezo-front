@@ -44,6 +44,11 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
     this.imgs.push('assets/1.jpg');
     this.imgs.push('assets/2.jpg');
+    this.imgs.push('assets/item_1.jpg');
+    this.imgs.push('assets/item_2.jpg');
+
+    this.imgs.push('assets/item_3.jpeg');
+
 
 
     for (let img of this.imgs) {
