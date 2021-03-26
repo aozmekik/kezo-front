@@ -18,7 +18,10 @@ export const Icons = [
   'facebook',
   'instagram',
   'twitter',
-  'pinterest'
+  'pinterest',
+  'one-grid',
+  'two-grid',
+  'four-grid'
 ]
 
 @Injectable({

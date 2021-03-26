@@ -1,0 +1,41 @@
+<div id="wrapper">
+    <div class="row no-gutters">
+        <h1 class="col-12 col-md-6">Push Up Bras</h1>
+
+        <div class="row justify-content-end col-12 col-md-6" id="filters">
+            <div class="col-6">
+
+                <div *ngIf="isMedium(); then desktop else mobile"></div>
+                <ng-template #desktop>
+                    <button (click)="changeView(4)" class="col-3 grid-buttons">
+                        <mat-icon svgIcon="four-grid" [ngClass]="(view >= 3)?'picked-view':'nonpicked-view'">
+                        </mat-icon>
+                    </button>
+                </ng-template>
+                <ng-template #mobile>
+                    <button (click)="changeView(1)" class="col-3 grid-buttons">
+                        <mat-icon svgIcon="one-grid" [ngClass]="(1==view)?'picked-view':'nonpicked-view'">
+                        </mat-icon>
+                    </button>
+                </ng-template>
+                <button (click)="changeView(2)" class="col-3  grid-buttons">
+                    <mat-icon svgIcon="two-grid" [ngClass]="(2==view)?'picked-view':'nonpicked-view'">
+                    </mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <ng-container *ngTemplateOutlet="test"></ng-container>
+
+</div>
+
+<ng-template #test>
+    <div class="row no-gutters">
+        <app-product-list-item *ngFor="let number of [0,1,2,3,4]" class="item"
+            [ngClass]="{'col-3':view==4, 'col-4':view==3, 'col-6': view==2,'col-12':view==1}">
+        </app-product-list-item>
+
+
+    </div>
+</ng-template>

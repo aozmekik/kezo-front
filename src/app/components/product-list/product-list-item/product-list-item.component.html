@@ -1,0 +1,22 @@
+<div id="wrapper">
+    <button (click)="clickFav()" id="fav-button">
+        <div *ngIf="isFav; then thenBlock else elseBlock"></div>
+        <ng-template #thenBlock>
+            <mat-icon svgIcon="love-filled"></mat-icon>
+        </ng-template>
+        <ng-template #elseBlock>
+            <mat-icon svgIcon="love"></mat-icon>
+        </ng-template>
+    </button>
+    <img src="assets/item_1.jpg">
+
+    <div id="heading">
+        New! The Comfort Edit
+    </div>
+    <div id="title">
+        Push Up Bra
+    </div>
+    <div id="price">
+        TL470,36
+    </div>
+</div>

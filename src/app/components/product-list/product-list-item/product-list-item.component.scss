@@ -1,0 +1,50 @@
+* {
+    /* outlines for debugging */
+    // outline-style: dashed;
+    // outline-color: red;
+    // outline-width: 0.1em;
+}
+
+#wrapper {
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+mat-icon {
+    fill: #ff3eb5;
+    width: 1.6em;
+}
+
+#fav-button {
+    background-color: transparent;
+    border: none;
+}
+
+button {
+    position: absolute;
+    top: 0.5em;
+    right: 5px;
+}
+
+#heading, #title, #price {
+    padding-left: 1em;
+}
+
+#heading {
+    margin-top: 1em;
+    font-family: helveticabold, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+#title {
+    font-family: helvetica, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+#price {
+    margin-top: 1em;
+}

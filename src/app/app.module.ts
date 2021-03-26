@@ -26,6 +26,8 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ProductComponent } from './components/product/product.component';
 import { RadioComponent } from './components/radio/radio.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { ProductListItemComponent } from './components/product-list/product-list-item/product-list-item.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -46,6 +48,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     SignupComponent,
     ProductComponent,
     RadioComponent,
+    ProductListComponent,
+    ProductListItemComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,85 @@
+* {
+    /* outlines for debugging */
+    // outline-style: dashed;
+    // outline-color: red;
+    // outline-width: 0.1em;
+}
+
+#wrapper {
+    padding: 1em 0.8em 2em 0.8em;
+    max-width: 1280px;
+    
+	margin: auto;
+}
+
+
+
+#filters {
+    padding: 0.2em 0 0.2em 0;
+    background-color: #efefef;
+    margin: auto;
+    margin-bottom: 1em;
+}
+
+.grid-buttons {
+    float: right;
+}
+
+h1 {
+    font-family: helvetica, Arial, Helvetica, sans-serif;
+    font-size: 28px;
+}
+
+.row {
+    // margin-top: 1em;
+}
+
+.col,
+[class*="col-"] {
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+
+
+button {
+    padding: 0;
+    background-color: Transparent;
+    border: none;
+    width: 30px;
+    // outline: none;
+}
+
+mat-icon {
+    width: 20px;
+}
+
+.picked-view {
+    color: black;
+}
+
+.nonpicked-view {
+    color: #cccccc;
+}
+
+.item {
+    margin-top: 1em;
+}
+
+@media screen and (min-width: 768px) {
+    #filters {
+        background-color: transparent;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    button {
+        width: 35px;
+    }
+   
+
+    mat-icon {
+        width: 28px;
+    }
+}
