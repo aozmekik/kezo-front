@@ -1,13 +1,6 @@
 <div id="wrapper">
-    <button (click)="clickFav()" id="fav-button">
-        <div *ngIf="isFav; then thenBlock else elseBlock"></div>
-        <ng-template #thenBlock>
-            <mat-icon svgIcon="love-filled"></mat-icon>
-        </ng-template>
-        <ng-template #elseBlock>
-            <mat-icon svgIcon="love"></mat-icon>
-        </ng-template>
-    </button>
+    <app-fav-button id="fav-button"></app-fav-button>
+
     <img src="assets/item_3.jpeg">
 
     <div id="heading">

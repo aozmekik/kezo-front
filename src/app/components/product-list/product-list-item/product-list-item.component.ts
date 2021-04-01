@@ -9,16 +9,11 @@ import { Component, OnInit } from '@angular/core';
 // TODO. make favorite icon a component and reuse it.
 
 export class ProductListItemComponent implements OnInit {
-  isFav: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-
-  clickFav() {
-    this.isFav = !this.isFav;
-  }
 
 }

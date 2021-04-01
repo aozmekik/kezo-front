@@ -21,7 +21,6 @@ export class ProductComponent implements OnInit {
 
   sizes: string[] = ['32', '34', '36', '38'];
 
-  isFav: boolean = false;
   seeMore: boolean = false;
   isDefault: boolean = true;
   sizeX: number = 0;
@@ -116,10 +115,6 @@ export class ProductComponent implements OnInit {
 
       this.isDefault = true;
     }
-  }
-
-  clickFav() {
-    this.isFav = !this.isFav;
   }
 
   clickSeeMore() {

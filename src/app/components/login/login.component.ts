@@ -7,7 +7,6 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 
-// TODO. make checkbox component.
 
 export class LoginComponent implements OnInit {
   loginForm = new FormGroup({

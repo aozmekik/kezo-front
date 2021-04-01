@@ -42,15 +42,7 @@
 
                 <div class="row no-gutters">
                     <h2 class="col-11">Beyond Sexy</h2>
-                    <button (click)="clickFav()" id="fav-button" class="col-1">
-                        <div *ngIf="isFav; then thenBlock else elseBlock"></div>
-                        <ng-template #thenBlock>
-                            <mat-icon svgIcon="love-filled"></mat-icon>
-                        </ng-template>
-                        <ng-template #elseBlock>
-                            <mat-icon svgIcon="love"></mat-icon>
-                        </ng-template>
-                    </button>
+                    <app-fav-button id="fav-button" class="col-1"></app-fav-button>
                 </div>
 
                 <h1>Push Up Bra</h1>
