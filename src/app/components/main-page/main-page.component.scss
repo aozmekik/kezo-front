@@ -30,6 +30,11 @@ a:hover {
 }
 
 #first {
-    position: relative;
+    top: 60px;
+    position: fixed;
     z-index: -1;
+}
+
+#black-bar {
+    margin-top: 750px;
 }

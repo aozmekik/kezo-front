@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-main-page',
@@ -6,15 +6,21 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent implements OnInit {
+  @ViewChild('first') firstImage!: ElementRef;
+
+  readonly RATIO: number = 2.24;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.onResize(null);
   }
 
-  @HostListener('window:scroll', ['$event'])
-  checkScroll() {
-    (document.querySelector('#black-bar') as HTMLElement).style.marginTop = `-${window.scrollY / 2}px`;
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    var height = window.innerWidth / this.RATIO;
+    console.log(height);
+    (document.querySelector('#black-bar') as HTMLElement).style.marginTop = `${height - 100}px`;
   }
 
 }
