@@ -1,0 +1,35 @@
+.wrapper {
+    // background: url("../../../assets/background/1.png") no-repeat center center fixed; 
+    // padding-top: 50em;
+    // padding-bottom: 10em;
+    // background-repeat: no-repeat, repeat;
+    // background-size: cover;
+}
+
+#black-bar {
+    padding: 2em 0 2em 0;
+    background-color: black;
+    font-size: 2em;
+    font-family: futura;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+a {
+    margin-left: 2em;
+    color: white;
+}
+
+a:hover {
+    color: gray;
+    text-decoration: none;
+}
+
+#first {
+    position: relative;
+    z-index: -1;
+}

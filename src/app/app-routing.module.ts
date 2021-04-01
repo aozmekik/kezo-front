@@ -1,13 +1,13 @@
+import { MainPageComponent } from './components/main-page/main-page.component';
 import { ProductComponent } from './components/product/product.component';
 import { SignupComponent } from './components/signup/signup.component';
-import { TestComponent } from './components/test/test.component';
 import { LoginComponent } from './components/login/login.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '', component: TestComponent
+    path: '', component: MainPageComponent
   },
   {
     path: 'login', component: LoginComponent

@@ -29,6 +29,7 @@ import { RadioComponent } from './components/radio/radio.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductListItemComponent } from './components/product-list/product-list-item/product-list-item.component';
 import { FavButtonComponent } from './components/fav-button/fav-button.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -52,6 +53,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ProductListComponent,
     ProductListItemComponent,
     FavButtonComponent,
+    MainPageComponent,
   ],
   imports: [
     BrowserModule,

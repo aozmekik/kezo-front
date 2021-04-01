@@ -75,6 +75,8 @@ export class ProductComponent implements OnInit {
   checkScroll() {
     const maxY = 1200;
 
+    //FIXME. glitch happening.
+
     if (this.isSticky && window.pageYOffset >= maxY) {
       document.querySelectorAll('.sticky-sticked').forEach(e => (e as HTMLElement).style.top = `${maxY + 80}px`);
 

@@ -22,7 +22,7 @@
                 <ng-template #elseBlock>
                     <mat-icon class="col-2 right">arrow_drop_down</mat-icon>
                 </ng-template>
-                
+
 
             </button>
 
@@ -66,7 +66,11 @@
     </mat-sidenav>
 
     <mat-sidenav-content>
-        <div class="baba" [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}">
+        <ng-template [ngIf]="isSticky">
+            <div id="padding"></div>
+        </ng-template>
+
+        <div [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}">
             <div id="nav-bar" class="row no-gutters">
                 <div id="mobile-left" class="col-3">
                     <button (click)="sidenav.toggle()">

@@ -13,6 +13,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 
 export class MenuBarComponent implements OnInit {
   isSticky: boolean = false;
+  firstSticked: boolean = false;
   show: boolean = false;
   sideShow: { [id: string]: boolean; } = {};
 
@@ -35,13 +36,10 @@ export class MenuBarComponent implements OnInit {
     this.isSticky = window.pageYOffset >= 50;
 
     // this is a workaround for dropdowns.
-    if (this.isSticky) {
+    if (this.isSticky)
       document.querySelectorAll('.dropdown-content').forEach(e => (e as HTMLElement).style.marginTop = '-5px');
-    }
-    else {
+    else
       document.querySelectorAll('.dropdown-content').forEach(e => (e as HTMLElement).style.marginTop = `-${window.scrollY + 5}px`);
-
-    }
 
   }
 

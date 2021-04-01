@@ -49,6 +49,11 @@ body {
     src: url("assets/font/futurapt/futuraptbold.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: futura;
+    src: url("assets/font/futurapt/futura.otf") format("truetype");
+}
+
 /* custom item options */
 .h1-form {
     border-bottom: 0.01em solid #cccccc;
